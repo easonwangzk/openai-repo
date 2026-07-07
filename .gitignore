@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.pyc
+generated_speech.mp3
+generated_study_image.png
+sample_audio.mp3
