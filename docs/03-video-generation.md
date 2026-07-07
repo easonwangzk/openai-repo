@@ -59,6 +59,53 @@ Video generation can have stricter guardrails and model availability constraints
 - The model is not deprecated.
 - The allowed content and input types match your use case.
 
+## Azure Bot Service Deep Dive (AI-901 aligned)
+
+Video experiences are often delivered through conversational surfaces. Azure Bot Service is relevant when your AI workflow needs dialog management, channel integration, and operational bot hosting.
+
+### What to understand
+
+- Bot Framework SDK: code-first bot development in C# or JavaScript.
+- Copilot Studio: low-code/no-code agent creation with optional extension points.
+- Composer: visual flow authoring on top of Bot Framework patterns.
+
+### Where it fits with video workflows
+
+- A bot can collect user intent, then trigger video generation jobs.
+- The bot can return async status updates and final assets.
+- Channel integration enables delivery to web chat, Teams, or custom frontends.
+
+### Key architecture pattern
+
+1. User asks for content in a bot channel.
+2. Bot validates prompt and policy constraints.
+3. Backend enqueues video generation.
+4. Bot sends progress events and final download link.
+
+## Azure Machine Learning in Video and Multimodal Pipelines
+
+Azure Machine Learning is not required for basic API-driven video generation, but it becomes important when you need model lifecycle control around ranking, quality prediction, or moderation classifiers.
+
+### Typical AML add-ons in media workflows
+
+- Train a quality scoring model for generated clips.
+- Train custom classifiers for domain-specific safety checks.
+- Track experiments and deploy scoring endpoints with MLOps controls.
+
+### Decision rule
+
+- Use managed model APIs for generation first.
+- Introduce AML when custom post-processing models become a reliability or compliance requirement.
+
+## LUIS and Intent Routing in Agentic Media Systems
+
+Even though LUIS is a legacy/archived-era component, intent/entity design remains foundational for bot and agent routing.
+
+Reusable idea:
+
+- Separate intent detection (what user wants) from parameter extraction (what constraints apply).
+- Route intents to specific media tools: image generation, video generation, translation, or transcription.
+
 ## Suggested Exercises
 
 1. Write three prompts for the same scene using different cinematic styles.

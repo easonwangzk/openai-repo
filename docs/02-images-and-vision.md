@@ -47,6 +47,44 @@ For image creation, you describe the subject, style, scene, lighting, compositio
 - Use image generation for ideation first, then refine with iterative prompts.
 - Remember that image inputs count toward token or image costs.
 
+## Azure Computer Vision Deep Dive (AI-901 aligned)
+
+Azure Computer Vision focuses on extracting structured signals from images, while generative models focus on creating or transforming content. In exam scenarios, you are often asked to pick between these modes.
+
+### Core Computer Vision capability groups
+
+- Image analysis: tags, captions, and scene-level understanding.
+- OCR: printed text extraction from images.
+- Domain features: scenario-specific extraction and indexing workflows.
+
+### Typical enterprise use cases
+
+- Product catalog enrichment from image metadata.
+- Receipt and signage text extraction for downstream processing.
+- Content moderation and visual compliance checks.
+- Accessibility support through captioning.
+
+### Service selection guidance
+
+| Need | Better fit |
+|---|---|
+| Deterministic image metadata and OCR output | Azure Computer Vision |
+| Creative image synthesis from text | Image generation model |
+| Complex multimodal reasoning over image plus business context | Multimodal LLM workflow |
+
+### Design and reliability notes
+
+- OCR quality depends on image resolution, skew, lighting, and language coverage.
+- Captions are summaries, not guaranteed exhaustive object inventories.
+- For production pipelines, store both raw outputs and normalized fields so you can reprocess later.
+- Pair vision extraction with human-review thresholds for high-risk scenarios.
+
+### AI-901 exam lens
+
+- Know which tasks are perception/extraction versus generation.
+- Expect scenario questions that combine OCR + NLP + search or reporting.
+- Be ready to justify service choice by output type, latency, and explainability.
+
 ## Minimal Vision Pattern
 
 ```python

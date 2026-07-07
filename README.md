@@ -21,7 +21,8 @@ openai-repo/
 │   ├── 02-images-and-vision.md
 │   ├── 03-video-generation.md
 │   ├── 04-speech-to-text.md
-│   └── 05-text-to-speech.md
+│   ├── 05-text-to-speech.md
+│   └── 06-ai-901-study-alignment.md
 └── examples/
     ├── text_generation.py
     ├── vision_analysis.py
@@ -58,6 +59,7 @@ OPENAI_API_KEY=your_api_key_here
 3. Read [docs/03-video-generation.md](docs/03-video-generation.md) to learn the async workflow for video generation.
 4. Practice audio input with [docs/04-speech-to-text.md](docs/04-speech-to-text.md).
 5. Finish with [docs/05-text-to-speech.md](docs/05-text-to-speech.md).
+6. Use [docs/06-ai-901-study-alignment.md](docs/06-ai-901-study-alignment.md) to study by AI-901 exam objectives and track learning progress.
 
 ## Example Commands
 

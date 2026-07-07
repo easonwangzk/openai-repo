@@ -44,6 +44,42 @@ Control the delivery with directions such as:
 - Tell end users when the audio is AI-generated.
 - Test multiple voices for the same script before choosing one for production.
 
+## Speech Translation to Voice Output (AI-901 aligned)
+
+Text-to-speech is often the final stage of a larger speech pipeline.
+
+### End-to-end pattern
+
+1. Capture source speech.
+2. Transcribe and/or translate to target language.
+3. Apply formatting and terminology normalization.
+4. Synthesize target speech with voice and style controls.
+5. Stream or store output with metadata.
+
+### Where Azure Speech Translation fits
+
+- For live multilingual experiences, speech translation can output translated text or speech in near real time.
+- For high-fidelity branded voice output, teams often post-process translated text and then run TTS synthesis with strict style controls.
+
+### Quality controls for multilingual voice
+
+- Validate named entities after translation before synthesis.
+- Keep glossary rules for product names and legal terms.
+- Evaluate prosody by language, because pacing and stress differ across locales.
+- Add human review for public-facing critical announcements.
+
+### Cost and latency trade-offs
+
+- More target languages increase translation and synthesis cost.
+- Real-time voice output prioritizes latency; offline narration can prioritize quality.
+- Use short streaming chunks for conversational UX, and larger chunks for long-form narration.
+
+### AI-901 exam lens
+
+- Distinguish speech-to-text, speech translation, and text-to-speech as separate but composable services.
+- Understand that output voice quality is influenced by both translation quality and TTS settings.
+- Be able to choose between a direct speech translation flow and a staged pipeline.
+
 ## Minimal Python Pattern
 
 ```python
