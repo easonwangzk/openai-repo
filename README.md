@@ -52,6 +52,14 @@ cp .env.example .env
 
 ```env
 OPENAI_API_KEY=your_api_key_here
+AZURE_AI_FOUNDRY_ENDPOINT=https://your-resource-name.services.ai.azure.com/
+AZURE_AI_MODEL=gpt-4o-mini
+```
+
+5. For Entra ID-based Azure Foundry access (no API key), sign in with Azure CLI:
+
+```bash
+az login
 ```
 
 ## Learning Path
@@ -71,6 +79,7 @@ python examples/vision_analysis.py
 python examples/image_generation.py
 python examples/speech_to_text.py
 python examples/text_to_speech.py
+python examples/entra_id_chat.py
 ```
 
 ## Notes
