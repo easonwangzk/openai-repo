@@ -1,5 +1,7 @@
 # OpenAI Learning Repository
 
+[![CI](https://github.com/easonwangzk/openai-repo/actions/workflows/ci.yml/badge.svg)](https://github.com/easonwangzk/openai-repo/actions/workflows/ci.yml)
+
 A practical learning repository for exploring OpenAI models and APIs across text, images, video, speech-to-text, and text-to-speech.
 
 ## Goals
